@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jvclasses.client.ConjController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <Pane prefHeight="904.0" prefWidth="547.0">
+            <children>
+                <Label layoutX="158.0" layoutY="25.0" text="Conjugueur">
+                    <font>
+                        <Font size="48.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="serveurIP" layoutX="208.0" layoutY="142.0" />
+                <Label layoutX="248.0" layoutY="107.0" text="IP du serveur" />
+                <TextField fx:id="serveurPort" layoutX="208.0" layoutY="228.0" />
+                <Label layoutX="242.0" layoutY="192.0" text="Port du serveur" />
+                <Button layoutX="246.0" layoutY="275.0" mnemonicParsing="false" onAction="#connect" text="Connexion" />
+                <TextField fx:id="verbeAconjuguer" layoutX="260.0" layoutY="342.0" />
+                <Label layoutX="146.0" layoutY="346.0" text="Verbe à l'infinitif" />
+                <TextField fx:id="temps" layoutX="260.0" layoutY="384.0" />
+                <Label layoutX="139.0" layoutY="388.0" text="Temps à conjuguer" />
+                <Button fx:id="buttonEnvoyer" layoutX="253.0" layoutY="434.0" mnemonicParsing="false" onAction="#envoyerVerbe" text="Envoyer" visible="false" />
+                <TextArea fx:id="verbeConjugue" editable="false" layoutX="48.0" layoutY="543.0" prefHeight="318.0" prefWidth="454.0" />
+                <Label fx:id="erreur" alignment="CENTER" layoutX="7.0" layoutY="474.0" prefHeight="55.0" prefWidth="535.0" text="Erreur" textAlignment="CENTER" textFill="RED" visible="false" />
+            </children>
+        </Pane>
+    </children>
+</VBox>
